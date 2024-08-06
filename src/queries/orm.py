@@ -540,7 +540,6 @@ class AsyncORM:
 
     @staticmethod
     async def select_workers_with_relationship_contains_eager_with_limit():
-        # Горячо рекомендую ознакомиться: https://stackoverflow.com/a/72298903/22259413 
         async with async_session_factory() as session:
             subq = (
                 select(ResumesOrm.id.label("parttime_resume_id"))
